@@ -1,14 +1,10 @@
 import React from "react";
 
+
+
+// Config
 import "./css/index.css";
-
-import "../config"
-
-
-
-
-
-
+import "./config"
 
 // Components
 import SearchForm from "./SearchForm";
