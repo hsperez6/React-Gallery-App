@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Route, Routes, Link, NavLink } from "react-router-dom";
 
 
 // Config
@@ -13,13 +13,15 @@ import PhotoContainer from "./PhotoContainer";
 
 const App = () => {
   return (
-    <>
+    <div class="container">
+
       <SearchForm />
 
       <MainNav />
 
       <PhotoContainer />
-    </>
+
+    </div>
   );
 };
 

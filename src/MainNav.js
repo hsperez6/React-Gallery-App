@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const MainNav = () => {
 
   return (
@@ -10,12 +9,9 @@ const MainNav = () => {
         <li><a href='#'>Dogs</a></li>
         <li><a href='#'>Computers</a></li>
       </ul>
-  </nav>
+    </nav>
   )
 
 }
-
-
-
 
 export default MainNav;
