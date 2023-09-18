@@ -2,7 +2,9 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 
 
-const MainNav = () => {
+const MainNav = ({ changeQuery }) => {
+
+  changeQuery("cats")
 
   return (
     <nav className="main-nav">

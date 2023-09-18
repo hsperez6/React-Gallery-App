@@ -6,7 +6,7 @@ import axios from "axios";
 
 // Config
 import "./css/index.css";
-import "./config";
+import apiKey from "./config";
 
 // Components
 import SearchForm from "./SearchForm";
@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=18fea1f8ec1f67681eee754e8b0a90ec&tags=${query}&per_page=24&format=json&nojsoncallback=1`
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`
       )
       .then((response) => setPix(response.data.photos.photo));
   }, [query]);
@@ -37,11 +37,11 @@ const App = () => {
     <div className="container">
       <SearchForm changeQuery={handleQueryChange}/>
 
-      <MainNav />
+      <MainNav changeQuery={handleQueryChange}/>
 
       <Routes>
         <Route path="/" element={<PhotoContainer pix={pix} />} />
-        <Route path="cats" element={<PhotoContainer />} />
+        <Route path="cats" element={<PhotoContainer pix={pix}/>} />
         <Route path="dogs" element={<PhotoContainer />} />
         <Route path="computers" element={<PhotoContainer />} />
         <Route path="*" element={<NotFound />} />
