@@ -27,6 +27,13 @@ const SearchForm = ({ changeQuery }) => {
       </button>
     </form>
   );
+
+
 };
 
 export default SearchForm;
+
+/**
+  <NavLink to='search'>Cats</NavLink></li>
+
+ */
