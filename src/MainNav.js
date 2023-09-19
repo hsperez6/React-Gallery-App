@@ -1,19 +1,14 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
 
-
-const MainNav = ({changeQuery}) => {
-
-  const handleNavClick = (subject) => {
-    changeQuery(subject)
-  }
+const MainNav = ({ changeQuery }) => {
 
   return (
     <nav className="main-nav">
       <ul>
-        <li><NavLink to='search/cats' onClick={() => handleNavClick('cats')}>Cats</NavLink></li>
-        <li><NavLink to='search/dogs'>Dogs</NavLink></li>
-        <li><NavLink to='search/computers'>Computers</NavLink></li>
+        <li><NavLink to='search/cats' onClick={() => changeQuery('cats')}>Cats</NavLink></li>
+        <li><NavLink to='search/dogs' onClick={() => changeQuery('dogs')}>Dogs</NavLink></li>
+        <li><NavLink to='search/computers' onClick={() => changeQuery('computers')}>Computers</NavLink></li>
       </ul>
     </nav>
   )
@@ -21,8 +16,3 @@ const MainNav = ({changeQuery}) => {
 }
 
 export default MainNav;
-
-
-/**
-
- */

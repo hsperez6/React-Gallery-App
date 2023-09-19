@@ -4,10 +4,10 @@ import "./css/index.css";
 
 import PhotoContainer from "./PhotoContainer";
 
-const Cats = ({ pix, changeQuery, loading }) => {
+const Dogs = ({ pix, changeQuery, loading }) => {
 
   useEffect(() => {
-    changeQuery('cats')
+    changeQuery('dogs')
   });
 
   return (
@@ -16,4 +16,4 @@ const Cats = ({ pix, changeQuery, loading }) => {
 
 };
 
-export default Cats;
+export default Dogs;
