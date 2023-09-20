@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
+      .get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&sort=relevance&per_page=24&format=json&nojsoncallback=1`)
       .then((response) => setPix(response.data.photos.photo))
       .catch((error) => {console.error('Error fetching data', error)})
       .finally(() => {setLoading(false)})
