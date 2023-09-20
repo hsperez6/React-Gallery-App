@@ -1,13 +1,22 @@
 body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  color: #3f4850;
+  background-image: url("../Files/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h2 {
   font-size: 2em;
   margin: 52px 0 40px;
   text-transform: capitalize;
+  color: #ebebec;
+  text-shadow: red 2px 3px;
+}
+
+p {
+  color: #ebebec;
+  text-shadow: red 2px 3px;
 }
 
 ul {

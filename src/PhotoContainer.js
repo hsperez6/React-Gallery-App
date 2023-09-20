@@ -2,14 +2,14 @@ import React from "react";
 
 import "./css/index.css";
 
-const PhotoContainer = ({ loading, pix }) => {
+const PhotoContainer = ({ title, loading, pix }) => {
   return (
     <div className="photo-container">
       {loading ? (
         <h2>Loading...</h2>
       ) : (
         <>
-          <h2>Results</h2>
+          <h2>{title}</h2>
           <ul>
             {pix.map((pic) => (
               <li key={pic.id}>

@@ -4,14 +4,14 @@ import "./css/index.css";
 
 import PhotoContainer from "./PhotoContainer";
 
-const Computers = ({ pix, changeQuery, loading }) => {
+const Computers = ({ title, pix, changeQuery, loading }) => {
 
   useEffect(() => {
     changeQuery('computers')
   });
 
   return (
-    <PhotoContainer loading={loading} pix={pix} />
+    <PhotoContainer title={title} loading={loading} pix={pix} />
   )   
 
 };
