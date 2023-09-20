@@ -11,10 +11,7 @@ const Cats = ({ title, pix, changeQuery, loading }) => {
   });
 
   return (
-    <>
     <PhotoContainer title={title} loading={loading} pix={pix} />
-
-    </>
   )   
 
 };

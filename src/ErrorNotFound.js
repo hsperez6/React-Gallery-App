@@ -2,7 +2,6 @@ import React from "react";
 
 import "./css/index.css";
 
-
 const ErrorNotFound = ({ title }) => {
 
   return (

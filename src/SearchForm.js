@@ -13,7 +13,6 @@ const SearchForm = ({ changeQuery }) => {
     e.currentTarget.reset();
   }
 
-
   return (
     <form className="search-form" onSubmit={e => handleSubmit(e)}>
       <input type="search" 
@@ -30,12 +29,6 @@ const SearchForm = ({ changeQuery }) => {
     </form>
   );
 
-
 };
 
 export default SearchForm;
-
-/**
-  <NavLink to='search'>Cats</NavLink></li>
-
- */

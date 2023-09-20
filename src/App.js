@@ -44,6 +44,7 @@ const App = () => {
       <SearchForm changeQuery={handleQueryChange}/>
       <MainNav changeQuery={handleQueryChange} />
 
+      {/* Routes */}
       <Routes>
         <Route path="/" element={null} />
         <Route path="search">
