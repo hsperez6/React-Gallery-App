@@ -10,15 +10,17 @@ import NotFound from "./NotFound";
 
 const Search = ({ loading, pix, changeQuery, title }) => {
 
-  let { searchTerm } = useParams(); //Gets the term written after "search/"
-
-  console.log(searchTerm)
+  let { searchTerm } = useParams(); //Gets the term written after "search/" in the address bar URL
 
   useEffect(() => {
     changeQuery(searchTerm);
   });
 
-  if (pix.length > 0) {  //Checks search results and determines which component to render
+  if(loading) { // If fetching data from API and awaiting response, render loading... message
+    return (
+      <h2>Loading...</h2>
+    )
+  } else  if (!loading && pix.length > 0) {  //Checks search results and determines which component to render
     return (
       <PhotoContainer title={title} loading={loading} pix={pix} />  //If search returns photos => display photos by rendering Photocontainer component
     );

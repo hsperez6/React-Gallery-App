@@ -2,7 +2,7 @@ import React from "react";
 
 import "./css/index.css";
 
-const NotFound = () => {
+const NotFound = () => { //If query does not return any results, display the following message
 
   return (
     

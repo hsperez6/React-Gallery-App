@@ -3,20 +3,20 @@ import { useNavigate } from "react-router-dom";
 
 const SearchForm = ({ changeQuery }) => {
   
-  const searchText = useRef(null)
+  const searchText = useRef(null); 
   const navigate = useNavigate();
   
   const handleSubmit = e => {
     e.preventDefault();
-    changeQuery(searchText.current.value);
-    navigate(`search/${searchText.current.value}`);
+    changeQuery(searchText.current.value); // changes the pix state in parent App component to the text inside the input element
+    navigate(`search/${searchText.current.value}`); // redirects user to a URL based on query search
     e.currentTarget.reset();
   }
 
   return (
     <form className="search-form" onSubmit={e => handleSubmit(e)}>
       <input type="search" 
-              ref={searchText}
+              ref={searchText} // Attaches useRef hook to form element
               name="search" 
               placeholder="Search" 
               required />

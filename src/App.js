@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import axios from "axios";
 
 // Config
@@ -18,9 +18,14 @@ import Search from "./Search";
 
 const App = () => {
   
+  const location = useLocation();
+
   //Hooks
   const [pix, setPix] = useState([]);
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState( //This enables the use of the address bar URL for searching terms in the flicks API
+    location.pathname.includes('search')
+      ? location.pathname.slice(location.pathname.lastIndexOf('/'))
+      : null);
   const [loading, setLoading] = useState(false);
 
   //fetch data from flickr API
